@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Marker+Hatch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+body {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.masterContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+
+.masterContainer_top {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 10rem;
+    /* font-family: 'Permanent Marker', cursive; */
+    font-family: 'Orbitron', sans-serif;
+
+    /* margin-top: 50%; */
+    
+    
+
+}
+
+.masterContainer_top_p {
+  color: white;
+  font-size: 2rem;
+}
+
+
+.masterContainer_top_right{
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    padding: 10%;
+    border: 15px solid;
+}
+
+.masterContainer_top_left {
+    flex: .5;
+    background-color: whitesmoke;
+    height: 50vh;
+    padding: 10%;
+    border: 15px solid;
+}
+
+.masterContainer_bottom {
+
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+
+
+
+
+.masterContainer_bottom_buttons {
+    padding-top: 8%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
