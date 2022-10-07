@@ -1,17 +1,29 @@
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: practice-ingress
-  # namespace: kube-system
+  name: elliott-ingress-svc
+  namespace: elliott-ingress
 spec:
   rules:
-    - host: kubernetes.docker.internal
+    - host: "*.amazonaws.com"
       http:
        paths:
         - path: /
           pathType: Prefix
           backend:
             service: 
-              name: ingress-practice-svc
+              name: elliott-ingress-svc
+              port:
+                number: 3000
+
+    - host: "ingress.elliottlamararnold.com"
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service: 
+              name: elliott-ingress-svc
               port:
                 number: 3000
