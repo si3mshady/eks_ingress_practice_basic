@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: elliott-ingress
+  name: elliott-ingress-app
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -21,7 +21,7 @@ spec:
         app: elliott-ingress
     spec:
       containers:
-      - image: si3mshady/time:v1.1 
+      - image: si3mshady/time:v1.2
         name: time
         ports:
           - containerPort: 3000
@@ -54,7 +54,7 @@ spec:
     - host: "*.amazonaws.com"
       http:
        paths:
-        - path: "/""
+        - path: "/"
           pathType: Prefix
           backend:
             service: 
@@ -62,7 +62,7 @@ spec:
               port:
                 number: 3000
 
-    - host: "ingress.elliottlamararnold.com"
+    - host: "*.elliottlamararnold.com"
       http:
         paths:
         - path: "/"
